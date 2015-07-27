@@ -45,7 +45,7 @@ array( "name" => "Destaque Box 03",
     "id" => $shortname."_box03",
     "type" => "page",  
     "options" => array(),  
-    "std" => ""), 
+    "std" => ""),
 	
 array( "type" => "close"),
 

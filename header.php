@@ -52,71 +52,10 @@
 	wp_head();
 ?>
 
-<!-- Modal anything slider -->
-
-<script type="text/javascript">
-var $a = jQuery.noConflict()
-$a(document).ready(function() {	
-
-	$a('a[name=modal]').click(function(e) {
-		e.preventDefault();
-		
-		var id = $a(this).attr('href');
-		var maskHeight = $a(document).height();
-		var maskWidth = $a(window).width();
-	
-		$a('#mask').css({'width':maskWidth,'height':maskHeight});
-		$a('#mask').fadeIn(50);	
-		$a('#mask').fadeTo("slow",0.8);	
-	
-		//Get the window height and width
-		var winH = $a(window).height();
-		var winW = $a(window).width();
-              
-		$a(id).css('top',  winH/2.5-$a(id).height()/2.5);
-		$a(id).css('left', winW/2-$a(id).width()/2);
-		$a(id).fadeIn(500); 
-	
-	});
-	
-	$a('.window .close').click(function (e) {
-		e.preventDefault();
-		
-		$a('#mask').hide();
-		$a('.window').hide();
-	});		
-	
-	$a('#mask').click(function () {
-		$a(this).hide();
-		$a('.window').hide();
-	});			
-	
-});
-
-</script>
-<!-- Fecha Modal -->	
-
 </head>
 
 <body <?php body_class(); ?>>
-
-<div id="mask"></div>  <!-- Máscara para cobrir a tela -->
-
-
- <!-- Janela Modal com caixa de diálogo -->  
  
-<div id="dialog1" class="window">
-<a class="close"></a>
-	<div id="login-box">
-	<h2>&Aacute;rea do Cliente</h2>
-		<div id="login-email">USU&Aacute;RIO <input class="login-email" name="txtEmail" id="txtEmail" type="text"></div> 
-		<div id="login-senha">SENHA <input class="login-senha" name="txtSenha" id="txtSenha" type="password"></div>
-		<div id="login-entrar"><input type="image" name="imageField" id="imageField" src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/entrar-cliente.png"></div>
-		<div id="login-info"><a href="">Recuperar Senha?</a></div>
-	</div><!-- #login-box -->
-</div><!-- #dialog1 -->
-
-<!-- Fim Janela Modal com caixa de diálogo --> 
 
 <div id="cabecalho"></div>
 
@@ -132,7 +71,7 @@ $a(document).ready(function() {
 			</div><!-- #access -->
             
             <div id="botao-cliente">
-            <a href="#dialog1" name="modal" class="a-botao-cliente"></a>
+            <a href="http://cliente.perfig.com.br" target="_blank" class="a-botao-cliente"></a> 
             </div><!-- #botao-cliente -->
             
 	</div><!-- #header -->
